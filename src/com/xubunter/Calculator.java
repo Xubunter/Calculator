@@ -73,7 +73,7 @@ public class Calculator {
         }
 
         /* Проверяем входные числа на выход за пределы диапазона [1..10] */
-        if (!isValidNumber(left) && !isValidNumber(right)) {
+        if (!isValidNumber(left) || !isValidNumber(right)) {
             /* Кидаем ошибку с указанием на некоректное значение*/
             throw new InputException("Ошибка ввода! Недопустимое значение'" + (isValidNumber(right) ?
                     (isRoman ? RomanNumber.toRoman(left): left) :
