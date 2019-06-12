@@ -51,7 +51,7 @@ public class Calculator {
                 right = Integer.parseInt(inputs.get(2));
             }
             catch (NumberFormatException e){
-                throw new InputException("Ошибка ввода! Неожиданное значение '" + inputs.get(2) + "'.1");
+                throw new InputException("Ошибка ввода! Неожиданное значение '" + inputs.get(2) + "'.");
             }
         }
         catch (NumberFormatException e){
@@ -60,14 +60,14 @@ public class Calculator {
                 left = RomanNumber.toRoman(inputs.get(0)).getNumber();
             }
             catch (IllegalArgumentException e1){
-                throw new InputException("Ошибка ввода! Неожиданное значение '" + inputs.get(0) + "'.2");
+                throw new InputException("Ошибка ввода! Неожиданное значение '" + inputs.get(0) + "'.");
             }
             try{
                 // Пробуем получить второе римское число
                 right = RomanNumber.toRoman(inputs.get(2)).getNumber();
             }
             catch (IllegalArgumentException e1){
-                throw new InputException("Ошибка ввода! Неожиданное значение '" + inputs.get(2) + "'.3");
+                throw new InputException("Ошибка ввода! Неожиданное значение '" + inputs.get(2) + "'.");
             }
             isRoman = true; // Активируем флаг римских чисел
         }
